@@ -22,7 +22,7 @@
                     <input 
                         type="text" 
                         id="expenseName" 
-                        placeholder="e.g., Grocery, Gas, Rent"
+                        placeholder="e.g., Lunch, Gas, Movie Ticket"
                         maxlength="50"
                     >
                 </div>
@@ -36,6 +36,17 @@
                         min="0"
                         step="0.01"
                     >
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseCategory">Category:</label>
+                    <select id="expenseCategory">
+                        <option value="food">🍔 Food</option>
+                        <option value="travel">✈️ Travel</option>
+                        <option value="shopping">🛍️ Shopping</option>
+                        <option value="bills">📄 Bills</option>
+                        <option value="others">📌 Others</option>
+                    </select>
                 </div>
 
                 <div class="btn-group">
@@ -54,6 +65,14 @@
         <div class="card">
             <div class="card-header">
                 <h2>Expenses List</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="food">🍔 Food</button>
+                    <button class="filter-btn" data-filter="travel">✈️ Travel</button>
+                    <button class="filter-btn" data-filter="shopping">🛍️ Shopping</button>
+                    <button class="filter-btn" data-filter="bills">📄 Bills</button>
+                    <button class="filter-btn" data-filter="others">📌 Others</button>
+                </div>
             </div>
             <div class="card-body">
                 <div id="expensesList" class="list">
